@@ -8,8 +8,9 @@ namespace CardGame
         Forest,
         Volcano,
         Ocean,
-        Mountain,
-        Wasteland
+        Frozen,
+        Pateau,
+        Desert
     }
 
     /// <summary>

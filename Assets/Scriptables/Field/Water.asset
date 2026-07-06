@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b1d066c6dd94bafdf33883a8373a, type: 3}
+  m_Name: Water
+  m_EditorClassIdentifier: 
+  id: 1
+  cardName: Ocean Territory
+  type: 3
+  description: "Trong l\xE3nh \u0111\u1ECBa bi\u1EC3n qu\xE1i h\u1EC7 th\u1EE7y s\u1EBD
+    nh\u1EADn \u0111\u01B0\u1EE3c kh\u1EA3 n\u0103ng \u1EA9n th\xE2n ko b\u1ECB ph\xE1t
+    hi\u1EC7n. N\u1EBFu qu\xE1i ko ph\u1EA3i h\u1EC7 th\u1EE7y \u0111\xFAng tr\xEAn
+    \xF4 n\xE0y qu\xE1 2 l\u01B0\u1EE3t s\u1EBD b\u1ECB ti\xEAu di\u1EC7t"
+  artwork: {fileID: 0}
+  environment: 3
+  effect: {fileID: 0}

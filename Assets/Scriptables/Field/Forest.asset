@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e65b1d066c6dd94bafdf33883a8373a, type: 3}
+  m_Name: Forest
+  m_EditorClassIdentifier: 
+  id: 2
+  cardName: Forest Territory
+  type: 3
+  description: "H\u1ED3i m\xE1u cho qu\xE1i th\xFA trong l\xE3nh \u0111\u1ECBa. Qu\xE1i
+    th\xFA h\u1EC7 r\u1EEBng nh\u1EADn \u0111c hi\u1EC7u qu\u1EA3 cao h\u01A1n"
+  artwork: {fileID: 0}
+  environment: 0
+  effect: {fileID: 0}
