@@ -6,6 +6,9 @@ Toàn bộ script UI nằm trong namespace `CardGame.UI`, data trong `CardGame`.
 ## Yêu cầu
 - **TextMeshPro**: Window → TextMeshPro → Import TMP Essential Resources.
 - Đã có sẵn các thẻ (MonsterCard, SpellCard, TrapCard, FieldCard) dạng asset.
+- Với FieldCard: nhớ điền cả `artwork` (hình lá bài) lẫn `fieldSprite`
+  (hình hiện lên Ô Field trên bàn khi lá đó được chơi — xem
+  `Scripts/UI/Duel/README_Duel.md` mục 3).
 
 ---
 
@@ -79,7 +82,20 @@ Trên object `DeckBuilder`, kéo vào các ô:
 - `sideDeckSection` → SideDeck (DeckSectionView)
 - `natureDeckSection` → NatureDeck (DeckSectionView)
 - `previewPanel` → LeftPanel (CardPreviewPanel)
-- `onBack` (UnityEvent) → gắn hàm điều hướng của bạn (vd load menu scene)
+- `onBack` (UnityEvent) → xem mục 6 bên dưới
+
+## 6. Nối nút Back về Home
+
+Scene này được vào từ Home (nút "Deck Builder", xem `Scripts/UI/Home/README_Home.md`),
+nên "Back" cần quay lại scene `Home`:
+1. Đảm bảo `DeckBuilder` đã có trong Build Settings (xem README_Home.md mục 1).
+2. Thêm 1 object trong scene, gắn script **SceneNavigator**
+   (`Scripts/Services/SceneNavigator.cs`).
+3. Trên `DeckBuilderController`, kéo object đó vào field `onBack` (UnityEvent),
+   chọn hàm `SceneNavigator.GoHome`.
+
+Nút **Back** trên `CardPreviewPanel` (đã nối `BackClicked` → `HandleBack` →
+`onBack.Invoke()` sẵn trong code) giờ sẽ tự quay về Home, không cần sửa gì thêm.
 
 ---
 
@@ -98,4 +114,3 @@ Trên object `DeckBuilder`, kéo vào các ô:
   persistentDataPath; muốn có dialog chọn file cần thêm plugin, vd StandaloneFileBrowser).
 - Đổi tên deck trước khi export: hiện `deckName` mặc định "New Deck" — bạn có thể
   thêm 1 InputField và set `_deck.deckName` (mở thêm API nếu cần).
-```

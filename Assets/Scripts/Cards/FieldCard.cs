@@ -26,6 +26,12 @@ namespace CardGame
         /// <summary>Hiệu ứng nền áp lên cả sân (vd: tăng ATK quái cùng hệ). Có thể null.</summary>
         public CardEffect effect;
 
+        /// <summary>
+        /// Sprite hiện trong Ô FIELD trên bàn khi lá này đang được kích hoạt
+        /// (khác với 'artwork' - hình lá bài trên tay/collection). Xem FieldSlotView.
+        /// </summary>
+        public Sprite fieldSprite;
+
         private void OnEnable()
         {
             type = CardType.Field;

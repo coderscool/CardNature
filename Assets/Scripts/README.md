@@ -18,10 +18,21 @@ Scripts/
 │   ├── HealEffect.cs
 │   ├── BuffAtkEffect.cs
 │   └── BattleContext.cs  ngữ cảnh khi hiệu ứng chạy
-└── Runtime/      Trạng thái trong trận (class thường, KHÔNG phải SO)
-    ├── CardInstance.cs   1 lá bài đang chơi (buff, úp/mở...)
-    ├── Player.cs         máu, tay bài, sân
-    └── Deck.cs           bộ bài
+├── Runtime/      Trạng thái trong trận (class thường, KHÔNG phải SO)
+│   ├── CardInstance.cs   1 lá bài đang chơi (buff, úp/mở...)
+│   ├── Player.cs         máu, tay bài, sân
+│   └── Deck.cs           bộ bài
+├── Board/        Bàn chơi dạng lưới (MonoBehaviour, dùng ở scene Duel)
+│   ├── BoardCell.cs      1 ô: tọa độ + lá bài đang chiếm ô + sự kiện click
+│   └── BoardGrid.cs      sinh bàn NxN (mặc định 8x8) lúc vào scene
+├── Services/     Hạ tầng dùng chung
+│   ├── SceneNames.cs     hằng số tên scene (Home/DeckBuilder/Duel)
+│   ├── SceneNavigator.cs điều hướng scene, nối vào UnityEvent trên UI
+│   └── DeckSerializer.cs export/import deck ra JSON
+└── UI/           Màn hình (namespace CardGame.UI)
+    ├── Home/         HomeController.cs - 2 nút: Deck Builder, Play
+    ├── DeckBuilder/  xem README_DeckBuilder.md
+    └── Duel/         DuelSceneController.cs - màn chơi, bàn 8x8
 ```
 
 ## Cách dùng
